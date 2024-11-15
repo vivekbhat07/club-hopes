@@ -1,0 +1,119 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #f4f4f4;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    color: #007bff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('./source/WhatsApp\ Image\ 2024-11-14\ at\ 23.38.27_c16dc777.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .countdown {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  /* Grid Section */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .grid button {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #007bff;
+    border: none;
+    margin-top: 50px;
+    color: white;
+  }
+  
+  .grid button:hover {
+    cursor: pointer;
+  }
+  
+  .grid .grid-item {
+    width: 20%; /* Smaller divs in grid */
+    min-width: 150px; /* Ensure divs don't shrink too much */
+    background-color: #e9ecef;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .grid-item h4 {
+    font-size: 1rem; /* Smaller font size for titles */
+    margin: 10px 0;
+  }
+  
+  .grid-item p {
+    font-size: 0.9rem; /* Adjust paragraph text size */
+    color: #555;
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .grid .grid-item {
+      width: 45%; /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid .grid-item {
+      width: 100%; /* Single item per row on very small screens */
+    }
+  }
+  

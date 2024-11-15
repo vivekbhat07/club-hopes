@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Media Website</title>
+  <link rel="stylesheet" href="./event.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="./event.html">Home</a>
+  <a href="./upcoming.html">Upcoming Events</a>
+  <a href="./recap.html">Recap</a>
+  <a href="#">Missed Events</a>
+  <a href="./contact.html">Contact Us</a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>PES UNIVERSITY EVENTS</h1>
+  <p>Explore the latest and greatest events happening around campus!</p>
+  <div class="countdown" id="countdown-timer">
+    <span id="days">259</span> TOTAL EVENTS
+    <span id="hours">10</span> HACKATHON
+    <span id="minutes">44</span> CONCERT
+    <span id="seconds">47</span> CLUB EVENTS
+</div>
+
+</section>
+
+<!-- Grid Section -->
+<div class="grid">
+  <h2>Upcoming Events</h2>
+  <button>&gt;</button>
+  <div class="grid-item">
+    <img src="./source/TEDX.jpg" alt="Event 1">
+    <h4>CLUB EVENTS</h4>
+    <p>Highlights of Club Events...</p>
+  </div>
+  <div class="grid-item">
+    <img src="./source/HACK.jpg" alt="Event 2">
+    <h4>HACKATHON</h4>
+    <p>Highlights of Hackathon...</p>
+  </div>
+  <div class="grid-item">
+    <img src="./source/AT.jpg" alt="Event 3">
+    <h4>FEST</h4>
+    <p>Highlights of Fest...</p>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid-item">
+    <img src="./source/SHANKER_MAHADEVAN.jpg" alt="Event 4">
+    <h4>GOLDEN JUBILEE</h4>
+    <p>Highlights of Golden Jubilee...</p>
+  </div>
+  <div class="grid-item">
+    <img src="./source/WhatsApp Image 2024-11-14 at 23.38.27_c16dc777.jpg" alt="Event 5">
+    <h4>AT-24</h4>
+    <p>Highlights of AT-24...</p>
+  </div>
+  <div class="grid-item">
+    <img src="./source/RAGU.jpg" alt="Event 6">
+    <h4>RAJYOTSAVA</h4>
+    <p>Highlights of Rajyotsava...</p>
+  </div>
+  <h2>Past Events</h2>
+  <button>&gt;</button>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <p>&copy; 2024 PES University Events. All rights reserved.</p>
+</footer>
+
+<script>
+  // Countdown Timer JavaScript
+  function updateCountdown() {
+  // Generate a random initial value for timeLeft (e.g., between 100,000 and 500,000 seconds)
+  let timeLeft = Math.floor(Math.random() * (500000 - 100000 + 1) + 100000); 
+
+  // Define the countdown logic using timeLeft
+  const days = Math.floor(timeLeft / (60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (60 * 60 * 24)) / (60 * 60));
+  const minutes = Math.floor((timeLeft % (60 * 60)) / 60);
+  const seconds = Math.floor(timeLeft % 60);
+
+  // Update DOM elements
+  document.getElementById('days').innerText = days*80;
+  document.getElementById('hours').innerText = hours*7;
+  document.getElementById('minutes').innerText = minutes;
+  document.getElementById('seconds').innerText = seconds;
+
+  // Decrease timeLeft for the next update
+  timeLeft--;
+
+  // Stop the countdown when it reaches zero
+  if (timeLeft < 0) {
+    clearInterval(countdownInterval);
+    document.getElementById('days').innerText = 0;
+    document.getElementById('hours').innerText = 0;
+    document.getElementById('minutes').innerText = 0;
+    document.getElementById('seconds').innerText = 0;
+  }
+}
+
+// Update countdown every second
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+
+</script>
+
+</body>
+</html>
